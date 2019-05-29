@@ -1,6 +1,6 @@
 
 
-function abc(){
+function abc(): number{
     return 2+3
 }
 
