@@ -5,8 +5,10 @@
   "main": "./lib/robohash-avatars.js",
   "types": "./lib/robohash-avatars.d.ts",
   "scripts": {
+    "pretest": "tsc -p tsconfig.test.json",
     "build": "tsc && eslint \".\\lib\\*.js\" && eslint \".\\src\\*.ts\"",
-    "test": "nyc --reporter=cobertura mocha tests/*.test.js --reporter mocha-junit-reporter --timeout 10000 --exit",
+    "buildtest": "tsc -p tsconfig.test.json && mocha tests/js/**/*.test.js",
+    "test": "nyc --reporter=cobertura mocha tests/js/**/*.test.js --reporter mocha-junit-reporter --timeout 10000 --exit",
     "devtest": "nyc mocha tests/*.test.js",
     "mocha": "mocha tests/*.test.js"
   },
@@ -30,6 +32,8 @@
   },
   "homepage": "https://github.com/ClydeDz/robohash-avatars-npm#readme",
   "devDependencies": {
+    "@types/node": "^11.13.8",
+    "@types/mocha": "^5.2.6",
     "mocha": "^6.1.4",
     "mocha-junit-reporter": "^1.22.0",
     "nyc": "^14.1.1",
