@@ -1,15 +1,15 @@
 const baseURL = "https://robohash.org/";
 
 enum CharacterSets{
-    Robots = "set_set1",
-    Monsters = "set_set2",
-    DisembodiedHeads = "set_set3",
-    Kittens = "set_set4"
+    Robots = "set1",
+    Monsters = "set2",
+    DisembodiedHeads = "set3",
+    Kittens = "set4"
 }
 
 enum BackgroundSets{
-    RandomBackground1 = "bgset_bg1",
-    RandomBackground2 = "bgset_bg2"
+    RandomBackground1 = "bg1",
+    RandomBackground2 = "bg2"
 }
 
 /**
@@ -25,6 +25,13 @@ function resolveSettings(key:string, setting: any) : string{
     return  `${key}=${setting}&`;
 }
 
+function getDimensions(width?: number, height?: number){
+    if(!width || !height){
+        return undefined;
+    }
+    return `${width}x${height}`;
+}
+
 /**
  * 
  * @param settings 
@@ -35,13 +42,13 @@ export function generateAvatar(username: string, characters?: CharacterSets,
     let apiURL = baseURL;
 
     if(!username){
-        username = "random hash"; //TODO: generate random hash
+        username = "XYZ"; //TODO: generate random hash
     }
     
     apiURL += `${username}?`;
     apiURL += resolveSettings("set", characters);
     apiURL += resolveSettings("bgset", background);
-    apiURL += resolveSettings("size", `${width}x${height}`);
+    apiURL += resolveSettings("size", getDimensions(width, height));
 
     return apiURL;
 }
