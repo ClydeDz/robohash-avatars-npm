@@ -66,5 +66,17 @@ describe("generateAvatar()", function () {
         }); 
         assert.equal(actual, "https://robohash.org/tonystark?set=set4&bgset=bg1&size=400x400");
     }); 
+
+    it("allz inputs supplied", function () {
+        console.log("\t", "[test]", this.test.title);
+        var actual = avatars.generateAvatar({
+            username: "tonystark",
+            background: undefined,
+            characters: undefined,
+            height: undefined,
+            width: undefined
+        }); 
+        assert.equal(actual, "https://robohash.org/tonystark");
+    }); 
     
 });
