@@ -100,6 +100,15 @@ describe("generateAvatar()", function () {
         assert.equal(actual, "https://robohash.org/peterparker?set=set2");
     }); 
 
+    it("username and background set supplied", function () {
+        console.log("\t", "[test]", this.test.title);
+        var actual = avatars.generateAvatar({
+            username: "peterparker",
+            background: avatars.BackgroundSets.RandomBackground1,
+        }); 
+        assert.equal(actual, "https://robohash.org/peterparker?bgset=bg1");
+    }); 
+
     it("width but no height supplied", function () {
         console.log("\t", "[test]", this.test.title);
         var actual = avatars.generateAvatar({
