@@ -44,12 +44,13 @@ function getDimensions(width?: number, height?: number): string{
 }
 
 /**
- * Remove the & character from the end of the URL if it exists.
+ * Remove the `&` and `?` characters from the end of the URL if it exists.
  * @param apiURL The API URL being constructed
  */
-function trimAmpersandIfExists(apiURL: string): string{
+function trimInvalidCharactersIfExists(apiURL: string): string{
     const doesURLEndWithAmpersand = apiURL.substr(apiURL.length - 1) === "&";
-    if(!doesURLEndWithAmpersand){
+    const doesURLEndWithQuestion = apiURL.substr(apiURL.length - 1) === "?";
+    if(!doesURLEndWithAmpersand && !doesURLEndWithQuestion){
         return apiURL;
     }
     return apiURL.substring(stringStartIndex, apiURL.length - stringTrimIndexFromEnd);
@@ -76,7 +77,7 @@ export function generateAvatar(settings: RobohashAvatarSettings): string {
     apiURL += resolveSettings("bgset", settings.background);
     apiURL += resolveSettings("size", getDimensions(settings.width, settings.height));
 
-    apiURL = trimAmpersandIfExists(apiURL);
+    apiURL = trimInvalidCharactersIfExists(apiURL);
 
     return apiURL;
 }

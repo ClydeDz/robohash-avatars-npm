@@ -28,7 +28,7 @@ describe("generateAvatar()", function () {
         var actual = avatars.generateAvatar({
             username: ""
         }); 
-        assert.equal(actual, "https://robohash.org/RobohashAvatarNPM?");
+        assert.equal(actual, "https://robohash.org/RobohashAvatarNPM");
     }); 
 
     it("undefined username input supplied", function () {
@@ -36,7 +36,7 @@ describe("generateAvatar()", function () {
         var actual = avatars.generateAvatar({
             username: undefined
         }); 
-        assert.equal(actual, "https://robohash.org/RobohashAvatarNPM?");
+        assert.equal(actual, "https://robohash.org/RobohashAvatarNPM");
     }); 
 
     it("null username input supplied", function () {
@@ -44,7 +44,7 @@ describe("generateAvatar()", function () {
         var actual = avatars.generateAvatar({
             username: null
         }); 
-        assert.equal(actual, "https://robohash.org/RobohashAvatarNPM?");
+        assert.equal(actual, "https://robohash.org/RobohashAvatarNPM");
     }); 
 
     it("valid username input supplied", function () {
@@ -52,7 +52,7 @@ describe("generateAvatar()", function () {
         var actual = avatars.generateAvatar({
             username: "tonystark"
         }); 
-        assert.equal(actual, "https://robohash.org/tonystark?");
+        assert.equal(actual, "https://robohash.org/tonystark");
     }); 
 
     it("all inputs supplied", function () {
