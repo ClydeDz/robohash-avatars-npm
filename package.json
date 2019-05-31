@@ -1,7 +1,7 @@
 {
   "name": "robohash-avatars",
-  "version": "0.0.1",
-  "description": "Placeholder",
+  "version": "0.1.0",
+  "description": "Generate robot-based avatar images based on any text.",
   "main": "./lib/robohash-avatars.js",
   "types": "./lib/robohash-avatars.d.ts",
   "scripts": { 
