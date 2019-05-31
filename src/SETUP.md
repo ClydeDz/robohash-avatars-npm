@@ -1,0 +1,9 @@
+### Build pipeline
+Install these npm packages.  
+```
+npm i eslint@5.16.0 -g 
+npm i eslint-plugin-eslint-plugin@2.1.0 -g
+npm i @typescript-eslint/eslint-plugin@1.9.0 
+npm i @typescript-eslint/parser@1.9.0
+```
+
