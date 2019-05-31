@@ -6,7 +6,7 @@
   "types": "./lib/robohash-avatars.d.ts",
   "scripts": { 
     "build": "tsc && eslint \".\\src\\*.ts\"",
-    "test": "nyc --reporter=cobertura mocha tests/*.test.js --reporter mocha-junit-reporter --timeout 10000 --exit",
+    "test": "nyc --reporter=lcov --reporter=cobertura mocha tests/*.test.js --reporter mocha-junit-reporter --timeout 10000 --exit",
     "devtest": "nyc mocha tests/*.test.js",
     "mocha": "mocha tests/*.test.js"
   },
