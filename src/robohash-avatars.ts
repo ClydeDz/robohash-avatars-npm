@@ -1,4 +1,7 @@
 const baseURL = "https://robohash.org/";
+const defaultUsername = "RobohashAvatarNPM";
+const stringStartIndex = 0;
+const stringTrimIndexFromEnd = 1;
 
 export enum CharacterSets{
     Robots = "set1",
@@ -26,18 +29,30 @@ export interface RobohashAvatarSettings {
  * @param key The key part of the query string.
  * @param setting The setting that needs to be supplied as the value for that key.
  */
-function resolveSettings(key: string, setting: any): string{
+function resolveSettings(key: string, setting: string | CharacterSets | BackgroundSets | undefined): string{
     if(!setting){
         return "";
     }
     return  `${key}=${setting}&`;
 }
 
-function getDimensions(width?: number, height?: number): any{
+function getDimensions(width?: number, height?: number): string{
     if(!width || !height){
-        return undefined;
+        return "";
     }
     return `${width}x${height}`;
+}
+
+/**
+ * Remove the & character from the end of the URL if it exists.
+ * @param apiURL The API URL being constructed
+ */
+function trimAmpersandIfExists(apiURL: string): string{
+    const doesURLEndWithAmpersand = apiURL.substr(apiURL.length - 1) === "&";
+    if(!doesURLEndWithAmpersand){
+        return apiURL;
+    }
+    return apiURL.substring(stringStartIndex, apiURL.length - stringTrimIndexFromEnd);
 }
 
 /**
@@ -53,13 +68,15 @@ export function generateAvatar(settings: RobohashAvatarSettings): string {
     }
 
     if(!settings.username){
-        settings.username = "XYZ"; //TODO: generate random hash
+        settings.username = defaultUsername; 
     }
     
     apiURL += `${settings.username}?`;
     apiURL += resolveSettings("set", settings.characters);
     apiURL += resolveSettings("bgset", settings.background);
     apiURL += resolveSettings("size", getDimensions(settings.width, settings.height));
+
+    apiURL = trimAmpersandIfExists(apiURL);
 
     return apiURL;
 }
