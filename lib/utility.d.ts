@@ -12,6 +12,12 @@ export declare class Utility {
      * @param width Width of the image
      * @param height Height of the image
      */
+    containsOnlyNumbers(width: number, height: number): boolean;
+    /**
+     * Validates dimensions and returns dimension is correct format.
+     * @param width Width of the image
+     * @param height Height of the image
+     */
     getDimensions(width?: number, height?: number): string;
     /**
      * Remove the `&` and `?` characters from the end of the URL if it exists.

@@ -23,10 +23,25 @@ export class Utility {
      * @param width Width of the image
      * @param height Height of the image
      */
+    public containsOnlyNumbers(width: number, height: number): boolean {
+        const onlyNumbersRegEx = /^\d+$/;
+        return onlyNumbersRegEx.test(width.toString()) && onlyNumbersRegEx.test(height.toString());
+    }
+
+    /**
+     * Validates dimensions and returns dimension is correct format.
+     * @param width Width of the image
+     * @param height Height of the image
+     */
     public getDimensions(width?: number, height?: number): string {
         if (!width || !height) {
             return "";
         }
+
+        if (!this.containsOnlyNumbers(width, height)) {
+            return "";
+        }
+
         return `${width}x${height}`;
     }
 
