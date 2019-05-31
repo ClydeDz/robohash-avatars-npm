@@ -3,27 +3,63 @@ const defaultUsername = "RobohashAvatarNPM";
 const stringStartIndex = 0;
 const stringTrimIndexFromEnd = 1;
 
+/**
+ * Characters sets available for the RoboHash avatar.
+ */
 export enum CharacterSets{
+    /**
+     * The default character.
+     */
     Robots = "set1",
+    /**
+     * Weird monsters character.
+     */
     Monsters = "set2",
+    /**
+     * Like robots but just heads.
+     */
     DisembodiedHeads = "set3",
+    /**
+     * Purr-y characters.
+     */
     Kittens = "set4"
 }
 
+/**
+ * Backgrounds available for the RoboHash avatar.
+ */
 export enum BackgroundSets{
     RandomBackground1 = "bg1",
     RandomBackground2 = "bg2"
 }
 
+/**
+ * Settings that you can supply to generate a RoboHash Avatar.
+ */
 export interface RobohashAvatarSettings {
+    /**
+     * The username that needs an avatar.
+     */
     username: string;
+    /**
+     * The RoboHash avatar character.
+     */
     characters?: CharacterSets;
+    /**
+     * The background applied for your avatar.
+     */
     background?: BackgroundSets;
+    /**
+     * Height of the avatar image.
+     */
     height?: number;
+    /**
+     * Width of the avatar image.
+     */
     width?: number;
 }
 
-/***
+/**
  * Checks if supplied setting exists and valid and constructs the query string part
  * of the API URL accordingly.
  * @param key The key part of the query string.
@@ -36,6 +72,11 @@ function resolveSettings(key: string, setting: string | CharacterSets | Backgrou
     return  `${key}=${setting}&`;
 }
 
+/**
+ * Validates dimensions and returns dimension is correct format.
+ * @param width Width of the image
+ * @param height Height of the image
+ */
 function getDimensions(width?: number, height?: number): string{
     if(!width || !height){
         return "";
