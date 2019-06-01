@@ -15,7 +15,7 @@ After installing, simply import it in your file.
 ```javascript
 const avatars = require("robohash-avatars");
 ```
-Consume the generateAvatar() API to get an avatar URL that you can use directly as an image. Supply the settings object to this method to generate the avatar image URL accordingly. **Username is required**. For the remainder, you can supply them based on your requirement. All settings are pretty self-explanatory.
+Consume the `generateAvatar()` API to get an avatar URL that you can use directly as an image. Supply the settings object to this method to generate the avatar image URL accordingly. **Username is required**. For the remainder, you can supply them based on your requirement. All settings are pretty self-explanatory.
 
 ```javascript
 var actual = avatars.generateAvatar({   
