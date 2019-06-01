@@ -22,13 +22,19 @@
   "keywords": [
     "avatar",
     "robohash",
+    "robohash-avatar",
     "user",
     "username",
     "random",
     "avatars",
     "robots",
     "kittens",
-    "aliens"
+    "aliens",
+    "cat",
+    "generator",
+    "html",
+    "javascript",
+    "typescript"
   ],
   "author": "Clyde D'Souza",
   "license": "MIT",
