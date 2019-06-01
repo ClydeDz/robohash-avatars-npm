@@ -24,8 +24,15 @@ export class Utility {
      * @param height Height of the image
      */
     public containsOnlyNumbers(width: number, height: number): boolean {
-        const onlyNumbersRegEx = /^\d+$/;
-        return onlyNumbersRegEx.test(width.toString()) && onlyNumbersRegEx.test(height.toString());
+        // Replaced RegEx because of https://rules.sonarsource.com/javascript/type/Security%20Hotspot/RSPEC-4784
+        const onlyNumbers = (input: string): boolean => {
+            for (let inputIndex = input.length - 1; inputIndex >= 0; inputIndex--) {
+                const d = input.charCodeAt(inputIndex);
+                if (d < 48 || d > 57) return false;
+            }
+            return true;
+        }
+        return onlyNumbers(width.toString()) && onlyNumbers(height.toString());
     }
 
     /**
