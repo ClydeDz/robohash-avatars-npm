@@ -10,18 +10,18 @@ Generate robot-based avatar images based on any text.
 [![npm](https://img.shields.io/npm/v/robohash-avatars.svg?color=brightgreen&logo=npm)](http://bit.ly/robohash-avatars)    
 
 ## Usage  
-After installing, simply import it in your file.
+After installing, simply import Robohash Avatars in your file.
 
 ```javascript
-const avatars = require("robohash-avatars");
+const robohashAvatars = require("robohash-avatars");
 ```
 Consume the `generateAvatar()` API to get an avatar URL that you can use directly as an image. Supply the settings object to this method to generate the avatar image URL accordingly. **Username is required**. For the remainder, you can supply them based on your requirement. All settings are pretty self-explanatory.
 
 ```javascript
-var actual = avatars.generateAvatar({   
+var avatarURL = robohashAvatars.generateAvatar({   
             username: "tonystark", 
-            background: avatars.BackgroundSets.RandomBackground1,
-            characters: avatars.CharacterSets.Kittens,
+            background: robohashAvatars.BackgroundSets.RandomBackground1,
+            characters: robohashAvatars.CharacterSets.Kittens,
             height: 400,
             width: 400
         }); 
