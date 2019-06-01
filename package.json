@@ -1,6 +1,6 @@
 {
   "name": "robohash-avatars",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Generate robot-based avatar images for any text.",
   "main": "./lib/robohash-avatars.js",
   "types": "./lib/robohash-avatars.d.ts",
@@ -22,19 +22,13 @@
   "keywords": [
     "avatar",
     "robohash",
-    "robohash-avatar",
     "user",
     "username",
     "random",
     "avatars",
     "robots",
     "kittens",
-    "aliens",
-    "cat",
-    "generator",
-    "html",
-    "javascript",
-    "typescript"
+    "aliens"
   ],
   "author": "Clyde D'Souza",
   "license": "MIT",
