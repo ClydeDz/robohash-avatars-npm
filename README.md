@@ -6,8 +6,8 @@ Generate robot-based avatar images based on any text.
 [![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/clydedsouza/RoboHash%20Avatars%20npm/27.svg)](https://clydedsouza.visualstudio.com/RoboHash%20Avatars%20npm/_build/latest?definitionId=27) 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ClydeDz_robohash-avatars-npm&metric=alert_status)](https://sonarcloud.io/dashboard?id=ClydeDz_robohash-avatars-npm) 
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ClydeDz_robohash-avatars-npm&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ClydeDz_robohash-avatars-npm) 
-![MIT License](https://img.shields.io/static/v1.svg?label=📜%20License&message=MIT&color=informational)   
-
+![MIT License](https://img.shields.io/static/v1.svg?label=📜%20License&message=MIT&color=informational) 
+[![npm](https://img.shields.io/npm/v/robohash-avatars.svg?color=brightgreen&logo=npm)](http://bit.ly/robohash-avatars)    
 
 ## Usage  
 After installing, simply import it in your file.
