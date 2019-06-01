@@ -43,4 +43,3 @@ Release notes can be found [here](https://github.com/ClydeDz/robohash-avatars-np
 [RoboHash.org](http://robohash.org) is developed by [Colin Davis](https://github.com/e1ven) / [RoboHash GitHub](https://github.com/e1ven/Robohash).   
 This npm package is developed by [Clyde D'Souza](https://clydedsouza.net). 
    
-
