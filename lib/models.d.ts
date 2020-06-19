@@ -17,7 +17,11 @@ export declare enum CharacterSets {
     /**
      * Purr-y characters.
      */
-    Kittens = "set4"
+    Kittens = "set4",
+    /**
+     * Human Technicians
+     */
+    Humans = "set5
 }
 /**
  * Backgrounds available for the RoboHash avatar.
