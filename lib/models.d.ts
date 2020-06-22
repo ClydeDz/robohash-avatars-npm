@@ -19,7 +19,7 @@ export declare enum CharacterSets {
      */
     Kittens = "set4",
     /**
-     * Human technicians
+     * Human Technicians
      */
     Humans = "set5"
 }
