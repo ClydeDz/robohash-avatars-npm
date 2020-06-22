@@ -17,7 +17,11 @@ export enum CharacterSets{
     /**
      * Purr-y characters.
      */
-    Kittens = "set4"
+    Kittens = "set4",
+    /**
+     * Human technicians 
+     */
+    Humans = "set5"
 }
 
 /**
@@ -27,7 +31,7 @@ export enum BackgroundSets{
     RandomBackground1 = "bg1",
     RandomBackground2 = "bg2"
 }
-
+ 
 /**
  * Settings that you can supply to generate a RoboHash Avatar.
  */
