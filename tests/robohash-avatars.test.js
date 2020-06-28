@@ -146,5 +146,14 @@ describe("generateAvatar()", function () {
         }); 
         assert.equal(actual, "https://robohash.org/peterparker");
     }); 
+
+    it("username and human character set supplied", function () {
+        console.log("\t", "[test]", this.test.title);
+        var actual = avatars.generateAvatar({
+            username: "peterparker",
+            characters: avatars.CharacterSets.Humans,
+        }); 
+        assert.equal(actual, "https://robohash.org/peterparker?set=set5");
+    }); 
     
 });
